@@ -378,6 +378,59 @@
             color: #555;
         }
 
+
+        /* FLOATING CUSTOMER SERVICE */
+
+        .customer-service {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 10px 28px rgba(255, 122, 0, 0.28);
+            z-index: 999;
+            transition: 0.25s ease;
+        }
+
+        .customer-service:hover {
+            transform: translateY(-4px) scale(1.04);
+            background: #ed6e00;
+            box-shadow: 0 14px 32px rgba(255, 122, 0, 0.34);
+        }
+
+        .customer-service svg {
+            width: 27px;
+            height: 27px;
+        }
+
+        .customer-service-label {
+            position: absolute;
+            right: 70px;
+            white-space: nowrap;
+            background: #171717;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 11px;
+            border-radius: 9px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(5px);
+            transition: 0.2s ease;
+        }
+
+        .customer-service:hover .customer-service-label {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         /* MOBILE */
 
         @media (max-width: 760px) {
@@ -716,26 +769,43 @@
         </section>
 
 
-        <!-- CONTACT -->
 
-        <section class="contact">
+        <!-- FLOATING CUSTOMER SERVICE -->
 
-            <h2>Need Help?</h2>
+        <a
+            class="customer-service"
+            href="https://t.me/zee_studio_mwd"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Customer Service"
+        >
+            <span class="customer-service-label">Customer Service</span>
 
-            <p>
-                Have a question about ZEE POS?
-                Contact ZEE STUDIO.
-            </p>
-
-            <a
-                class="contact-btn"
-                href="https://t.me/zee_studio_mm"
-                target="_blank"
-            >
-                💬 Contact ZEE STUDIO
-            </a>
-
-        </section>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                    d="M4 13V11C4 6.58 7.58 3 12 3C16.42 3 20 6.58 20 11V13"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 13H6C7.1 13 8 13.9 8 15V17C8 18.1 7.1 19 6 19H5C3.9 19 3 18.1 3 17V14C3 13.45 3.45 13 4 13Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+                <path
+                    d="M20 13H18C16.9 13 16 13.9 16 15V17C16 18.1 16.9 19 18 19H19C20.1 19 21 18.1 21 17V14C21 13.45 20.55 13 20 13Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+                <path
+                    d="M16 19C15.2 20.25 13.8 21 12 21H10.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </a>
 
 
         <!-- FOOTER -->
